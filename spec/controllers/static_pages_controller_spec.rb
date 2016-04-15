@@ -6,11 +6,7 @@ RSpec.describe StaticPagesController, type: :controller do
   it "should get home" do
       get :home
       expect(response).to be_success
-<<<<<<< HEAD
       assert_select "title", "Ruby on Rails Tutorial Sample App"
-=======
-      assert_select "title", "Home | Ruby on Rails Tutorial Sample App"
->>>>>>> a2f144489e9fd5927a57b8df448750438675ca80
   end
 
   it "should get help" do
@@ -23,6 +19,12 @@ RSpec.describe StaticPagesController, type: :controller do
     get :about
     expect(response).to be_success
     assert_select "title", "About | Ruby on Rails Tutorial Sample App"
+  end
+
+  it "should get contact" do
+    get :contact
+    expect(response).to be_success
+    assert_select "title", "Contact | Ruby on Rails Tutorial Sample App"
   end
 
 end
